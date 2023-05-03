@@ -1,0 +1,9 @@
+.questionBox{
+    border-style: solid;
+    border-color: black;
+    border-radius: 10px;
+    width: 350px;
+    height: 200px;
+    margin: 10px;
+    padding: 10px;
+}
