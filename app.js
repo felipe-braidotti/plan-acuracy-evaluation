@@ -14,6 +14,8 @@ function groupOneResult(a1, p1) {
   return x1 * p1;
 }
 
+document.getElementById("answerOne").addEventListener("change", calcular());
+
 function calcular() {
   console.log(
     groupOneResult(
