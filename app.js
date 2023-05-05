@@ -1,7 +1,6 @@
 let weightOne = 0.12;
 let weightTwo = 0.08;
 let resultsGroupOne = [0, 0];
-let variavelDoAlvaro = "alvaro";
 
 function questionResult(answer, weight) {
   if (answer === "1") {
