@@ -1,9 +1,24 @@
-.questionBox{
-    border-style: solid;
-    border-color: black;
-    border-radius: 10px;
-    width: 350px;
-    height: 200px;
+.question-box{
+    width: 300px;
+    height: 190px;
     margin: 10px;
     padding: 10px;
+    border-style: solid;
+    border-color: lightgray;
+    border-radius: 5px;
 }
+
+.question-box-header-group{
+    height: 25px;
+    border-radius: 5px;
+    background-color: lightskyblue;
+}
+
+.question-box-header-content-title{
+    margin: 8px;
+}
+
+.question-box-footer{
+    margin: 8px;
+}
+
