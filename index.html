@@ -10,24 +10,25 @@
     />
   </head>
   <body>
-    <div class="question">
+    <div class="question flex-wrap d-flex justify-content-start">
       <!-- Aqui se INICIA a BOX da Questão 01 -->
-      <div class="card question-box container" style="width: 18rem">
+      <div class="card question-box" style="width: 18rem">
         <div class="col">
           <!-- Aqui se INICIA a BOX-HEADER da Questão 01 -->
-          <div class="question-box-header container">
-            <div class="row">
-              <div class="question-box-header-group"></div>
-              <div class="question-box-header-content">
-                <h5 class="question-box-header-content-title">Questão 1</h5>
-              </div>
-            </div>
+          <div
+            class="question-box-header flex-row d-flex justify-content-between"
+          >
+            <h5 class="question-box-header-content-title">Questão 1</h5>
+            <div class="question-box-header-group-1"></div>
           </div>
+
           <!-- Aqui se ENCERRA a BOX-HEADER da Questão 01 -->
           <hr class="hr" />
           <!-- Aqui se INICIA a BOX-BODY da Questão 01 -->
           <div class="question-box-body">
-            <p>O plano de manutenção é atualizado constantemente?</p>
+            <p>
+              O plano foi criado com base nas ferramentas de confiabilidade?
+            </p>
           </div>
           <!-- Aqui se ENCERRA a BOX-BODY da Questão 01 -->
           <hr class="hr" />
@@ -46,40 +47,26 @@
             </select>
           </div>
           <!-- Aqui se ENCERRA a BOX-ANSWER da Questão 01 -->
-          <hr class="hr" />
-          <!-- Aqui se INICIA a BOX-FOOTER da Questão 01 -->
-          <div class="question-box-footer form-check form-switch">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckDefault"
-            />
-            <label class="form-check-label" for="flexSwitchCheckDefault"
-              >Utilizar este critério</label
-            >
-          </div>
-          <!-- Aqui se ENCERRA a BOX-FOOTER da Questão 01 -->
         </div>
       </div>
       <!-- Aqui se ENCERRA a BOX da Questão 01 -->
 
       <!-- Aqui se INICIA a BOX da Questão 02 -->
-      <div class="card question-box container" style="width: 18rem">
+      <div class="card question-box" style="width: 18rem">
         <div class="col">
           <!-- Aqui se INICIA a BOX-HEADER da Questão 02 -->
-          <div class="question-box-header container">
-            <div class="row">
-              <div class="question-box-header-group"></div>
-              <div class="question-box-header-content">
-                <h5 class="question-box-header-content-title">Questão 2</h5>
-              </div>
-            </div>
+          <div
+            class="question-box-header flex-row d-flex justify-content-between"
+          >
+            <h5 class="question-box-header-content-title">Questão 2</h5>
+            <div class="question-box-header-group-1"></div>
           </div>
+
           <!-- Aqui se ENCERRA a BOX-HEADER da Questão 02 -->
           <hr class="hr" />
           <!-- Aqui se INICIA a BOX-BODY da Questão 02 -->
           <div class="question-box-body">
-            <p>O plano de manutenção contempla as atividades de segurança?</p>
+            <p>Existe critério e rotina de revisão do plano de manutenção?</p>
           </div>
           <!-- Aqui se ENCERRA a BOX-BODY da Questão 02 -->
           <hr class="hr" />
@@ -91,30 +78,108 @@
               aria-label="Default select example"
               onchange="calculateQ2()"
             >
-              <option selected>Q02</option>
+              <option selected>Q01</option>
               <option value="1">Sim</option>
               <option value="2">Parcial</option>
               <option value="3">Não</option>
             </select>
           </div>
           <!-- Aqui se ENCERRA a BOX-ANSWER da Questão 02 -->
-          <hr class="hr" />
-          <!-- Aqui se INICIA a BOX-FOOTER da Questão 02-->
-          <div class="question-box-footer form-check form-switch">
-            <input
-              class="form-check-input"
-              type="checkbox"
-              id="flexSwitchCheckDefault"
-            />
-            <label class="form-check-label" for="flexSwitchCheckDefault"
-              >Utilizar este critério</label
-            >
-          </div>
-          <!-- Aqui se ENCERRA a BOX-FOOTER da Questão 02 -->
         </div>
       </div>
       <!-- Aqui se ENCERRA a BOX da Questão 02 -->
+
+      <!-- Aqui se INICIA a BOX da Questão 03 -->
+      <div class="card question-box" style="width: 18rem">
+        <div class="col">
+          <!-- Aqui se INICIA a BOX-HEADER da Questão 03 -->
+          <div
+            class="question-box-header flex-row d-flex justify-content-between"
+          >
+            <h5 class="question-box-header-content-title">Questão 3</h5>
+            <div class="question-box-header-group-2"></div>
+          </div>
+
+          <!-- Aqui se ENCERRA a BOX-HEADER da Questão 03 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-BODY da Questão 03 -->
+          <div class="question-box-body">
+            <p>
+              A documentação de segurança e os EPI's/EPC's são coerentes com o
+              tipo de atividade?
+            </p>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-BODY da Questão 03 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-ANSWER da Questão 03 -->
+          <div class="question-box-answer">
+            <select
+              id="answerThree"
+              class="form-select col-6"
+              aria-label="Default select example"
+              onchange="calculateQ3()"
+            >
+              <option selected>Q03</option>
+              <option value="1">Sim</option>
+              <option value="2">Parcial</option>
+              <option value="3">Não</option>
+            </select>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-ANSWER da Questão 03 -->
+        </div>
+      </div>
+      <!-- Aqui se ENCERRA a BOX da Questão 03 -->
+
+      <!-- Aqui se INICIA a BOX da Questão 04 -->
+      <div class="card question-box" style="width: 18rem">
+        <div class="col">
+          <!-- Aqui se INICIA a BOX-HEADER da Questão 04 -->
+          <div
+            class="question-box-header flex-row d-flex justify-content-between"
+          >
+            <h5 class="question-box-header-content-title">Questão 4</h5>
+            <div class="question-box-switch form-check form-switch">
+              <input
+                class="form-check-input"
+                type="checkbox"
+                id="flexSwitchCheckDefault"
+              />
+            </div>
+            <div class="question-box-header-group-2"></div>
+          </div>
+
+          <!-- Aqui se ENCERRA a BOX-HEADER da Questão 04 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-BODY da Questão 04 -->
+          <div class="question-box-body">
+            <p>
+              O plano possui informações para a realização de bloqueios nos ativos?
+            </p>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-BODY da Questão 04 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-ANSWER da Questão 04 -->
+          <div class="question-box-answer">
+            <select
+              id="answerFour"
+              class="form-select col-6"
+              aria-label="Default select example"
+              onchange="calculateQ4()"
+            >
+              <option selected>Q04</option>
+              <option value="1">Sim</option>
+              <option value="2">Parcial</option>
+              <option value="3">Não</option>
+              <option value="4">Não se Aplica</option> <!--Está parte pode ser removida assim que o switch da question-box for removida -->
+            </select>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-ANSWER da Questão 04 -->
+        </div>
+      </div>
+      <!-- Aqui se ENCERRA a BOX da Questão 04 -->
     </div>
+    </div>
+
     <script src="app.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
