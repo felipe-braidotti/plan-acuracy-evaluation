@@ -1,5 +1,8 @@
+let answersGroupOne = [0, 0];
 let weightsGroupOne = [0.12, 0.08];
 let resultsGroupOne = [0, 0];
+
+let answersGroupTwo = [0, 0];
 let weightsGroupTwo = [0.1, 0.1];
 let resultsGroupTwo = [0, 0];
 
@@ -15,10 +18,9 @@ function questionResult(answer, weight) {
 }
 
 function calculateQ1() {
-  let answerOne = document.getElementById("answerOne").value;
-  let resultOne = questionResult(answerOne, weightsGroupOne[0]);
-  resultsGroupOne[0] = resultOne;
-  console.log(`Resultado da Questão 01: `, resultOne);
+  answersGroupOne[0] = document.getElementById("answerOne").value;
+  resultsGroupOne[0] = questionResult(answersGroupOne[0], weightsGroupOne[0]);
+  console.log(`Resultado da Questão 01: `, resultsGroupOne[0]);
   console.log(
     resultsGroupOne[0] +
       resultsGroupOne[1] +
@@ -28,10 +30,9 @@ function calculateQ1() {
 }
 
 function calculateQ2() {
-  let answerTwo = document.getElementById("answerTwo").value;
-  let resultTwo = questionResult(answerTwo, weightsGroupOne[1]);
-  resultsGroupOne[1] = resultTwo;
-  console.log(`Resultado da Questão 02: `, resultTwo);
+  answersGroupOne[1] = document.getElementById("answerTwo").value;
+  resultsGroupOne[1] = questionResult(answersGroupOne[1], weightsGroupOne[1]);
+  console.log(`Resultado da Questão 02: `, resultsGroupOne[1]);
   console.log(
     resultsGroupOne[0] +
       resultsGroupOne[1] +
@@ -41,10 +42,19 @@ function calculateQ2() {
 }
 
 function calculateQ3() {
-  let answerThree = document.getElementById("answerThree").value;
-  let resultThree = questionResult(answerThree, weightsGroupTwo[0]);
-  resultsGroupTwo[0] = resultThree;
-  console.log(`Resultado da Questão 03: `, resultThree);
+  answersGroupTwo[0] = document.getElementById("answerThree").value;
+  answersGroupTwo[1] = document.getElementById("answerFour").value;
+  if (answersGroupTwo[1] === "4") {
+    weightsGroupTwo[0] = 0.2;
+    weightsGroupTwo[1] = 0;
+  } else {
+    weightsGroupTwo[0] = 0.1;
+    weightsGroupTwo[1] = 0.1;
+  }
+  resultsGroupTwo[0] = questionResult(answersGroupTwo[0], weightsGroupTwo[0]);
+  resultsGroupTwo[1] = questionResult(answersGroupTwo[1], weightsGroupTwo[1]);
+
+  console.log(`Resultado da Questão 03: `, resultsGroupTwo[0]);
   console.log(
     resultsGroupOne[0] +
       resultsGroupOne[1] +
@@ -54,10 +64,17 @@ function calculateQ3() {
 }
 
 function calculateQ4() {
-  let answerFour = document.getElementById("answerFour").value;
-  let resultFour = questionResult(answerFour, weightsGroupTwo[1]);
-  resultsGroupTwo[1] = resultFour;
-  console.log(`Resultado da Questão 04: `, resultFour);
+  answersGroupTwo[1] = document.getElementById("answerFour").value;
+  if (answersGroupTwo[1] === "4") {
+    weightsGroupTwo[0] = 0.2;
+    weightsGroupTwo[1] = 0;
+  } else {
+    weightsGroupTwo[0] = 0.1;
+    weightsGroupTwo[1] = 0.1;
+  }
+  resultsGroupTwo[0] = questionResult(answersGroupTwo[0], weightsGroupTwo[0]);
+  resultsGroupTwo[1] = questionResult(answersGroupTwo[1], weightsGroupTwo[1]);
+  console.log(`Resultado da Questão 04: `, resultsGroupTwo[1]);
   console.log(
     resultsGroupOne[0] +
       resultsGroupOne[1] +
