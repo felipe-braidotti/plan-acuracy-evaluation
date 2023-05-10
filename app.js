@@ -17,28 +17,37 @@ function questionResult(answer, weight) {
   return x1 * weight;
 }
 
-function calculateQ1() {
-  answersGroupOne[0] = document.getElementById("answerOne").value;
-  resultsGroupOne[0] = questionResult(answersGroupOne[0], weightsGroupOne[0]);
-  console.log(`Resultado da Questão 01: `, resultsGroupOne[0]);
-  console.log(
+function calculateTotal() {
+  // Função utilizada para calcular o resultado geral da pontuação.
+  resultTotal =
     resultsGroupOne[0] +
-      resultsGroupOne[1] +
-      resultsGroupTwo[0] +
-      resultsGroupTwo[1]
-  );
+    resultsGroupOne[1] +
+    resultsGroupTwo[0] +
+    resultsGroupTwo[1];
+
+  return resultTotal;
 }
 
-function calculateQ2() {
-  answersGroupOne[1] = document.getElementById("answerTwo").value;
-  resultsGroupOne[1] = questionResult(answersGroupOne[1], weightsGroupOne[1]);
-  console.log(`Resultado da Questão 02: `, resultsGroupOne[1]);
-  console.log(
-    resultsGroupOne[0] +
-      resultsGroupOne[1] +
-      resultsGroupTwo[0] +
-      resultsGroupTwo[1]
+function switchButton(switchID, selectorID) {
+  let questionEnabled = document.querySelector(`#${switchID}`);
+  let selectInput = document.querySelector(`#${selectorID}`);
+  document.getElementById(selectorID).value = "";
+  selectInput.toggleAttribute("disabled");
+  console.log(questionEnabled.checked);
+}
+
+function calculateG1(questionNumber, answerID) {
+  // função que receba qual é a questão do Grupo 1
+  answersGroupOne[questionNumber - 1] = document.getElementById(answerID).value;
+  resultsGroupOne[questionNumber - 1] = questionResult(
+    answersGroupOne[questionNumber - 1],
+    weightsGroupOne[questionNumber - 1]
   );
+  console.log(
+    `Resultado da Questão ${questionNumber}: `,
+    resultsGroupOne[questionNumber - 1]
+  );
+  console.log(calculateTotal());
 }
 
 function calculateQ3() {
