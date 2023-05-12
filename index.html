@@ -145,7 +145,7 @@
                 class="form-check-input"
                 type="checkbox"
                 id="switchQuestion4"
-                onchange="switchButton('switchQuestion4', 'answerFour', 4)"
+                onchange="switchButtonGroupTwo('switchQuestion4', 'answerFour', 4)"
                 checked
               />
             </div>
@@ -327,7 +327,7 @@
               id="answerEight"
               class="form-select col-6"
               aria-label="Default select example"
-              onchange="calculateG4(8)"
+              onchange="calculateG4(8, 'answerEight')"
             >
               <option value="" selected>Q08</option>
               <option value="1">Sim</option>
@@ -353,7 +353,7 @@
                 class="form-check-input"
                 type="checkbox"
                 id="switchQuestion9"
-                onchange="switchButton('switchQuestion9', 'answerNine', 9)"
+                onchange="switchButtonGroupFour('switchQuestion9', 'answerNine', 9, 'answerNine')"
                 checked
               />
             </div>
@@ -377,7 +377,7 @@
               id="answerNine"
               class="form-select col-6"
               aria-label="Default select example"
-              onchange="calculateG4(9)"
+              onchange="calculateG4(9,'answerNine')"
             >
               <option value="" selected>Q09</option>
               <option value="1">Sim</option>
@@ -403,7 +403,7 @@
                 class="form-check-input"
                 type="checkbox"
                 id="switchQuestion10"
-                onchange="switchButton('switchQuestion10', 'answerTen', 10)"
+                onchange="switchButtonGroupFour('switchQuestion10', 'answerTen', 10,'answerTen')"
                 checked
               />
             </div>
@@ -426,7 +426,7 @@
               id="answerTen"
               class="form-select col-6"
               aria-label="Default select example"
-              onchange="calculateG4(10)"
+              onchange="calculateG4(10,'answerTen')"
             >
               <option value="" selected>Q10</option>
               <option value="1">Sim</option>
@@ -452,7 +452,7 @@
                 class="form-check-input"
                 type="checkbox"
                 id="switchQuestion11"
-                onchange="switchButton('switchQuestion11', 'answerEleven', 11)"
+                onchange="switchButtonGroupFour('switchQuestion11', 'answerEleven', 11, 'answerEleven')"
                 checked
               />
             </div>
@@ -475,7 +475,7 @@
               id="answerEleven"
               class="form-select col-6"
               aria-label="Default select example"
-              onchange="calculateG4(11)"
+              onchange="calculateG4(11,'answerEleven')"
             >
               <option value="" selected>Q11</option>
               <option value="1">Sim</option>
