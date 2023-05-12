@@ -6,6 +6,10 @@ let answersGroupTwo = [0, 0];
 let weightsGroupTwo = [0.1, 0.1];
 let resultsGroupTwo = [0, 0];
 
+let answersGroupThree = [0, 0, 0];
+let weightsGroupThree = [0.08, 0.06, 0.06];
+let resultsGroupThree = [0, 0, 0];
+
 function questionResult(answer, weight) {
   if (answer === "1") {
     x1 = 1;
@@ -28,12 +32,13 @@ function calculateTotal() {
   return resultTotal;
 }
 
-function switchButton(switchID, selectorID) {
+function switchButton(switchID, selectorID, questionNumber) {
   let questionEnabled = document.querySelector(`#${switchID}`);
   let selectInput = document.querySelector(`#${selectorID}`);
-  document.getElementById(selectorID).value = "";
+  resultsGroupTwo[1] = document.getElementById(selectorID).value = "";
   selectInput.toggleAttribute("disabled");
   console.log(questionEnabled.checked);
+  calculateG2(questionNumber);
 }
 
 function calculateG1(questionNumber, answerID) {
@@ -50,10 +55,10 @@ function calculateG1(questionNumber, answerID) {
   console.log(calculateTotal());
 }
 
-function calculateQ3() {
+function calculateG2(questionNumber) {
   answersGroupTwo[0] = document.getElementById("answerThree").value;
   answersGroupTwo[1] = document.getElementById("answerFour").value;
-  if (answersGroupTwo[1] === "4") {
+  if (answersGroupTwo[1] === "") {
     weightsGroupTwo[0] = 0.2;
     weightsGroupTwo[1] = 0;
   } else {
@@ -63,31 +68,9 @@ function calculateQ3() {
   resultsGroupTwo[0] = questionResult(answersGroupTwo[0], weightsGroupTwo[0]);
   resultsGroupTwo[1] = questionResult(answersGroupTwo[1], weightsGroupTwo[1]);
 
-  console.log(`Resultado da Questão 03: `, resultsGroupTwo[0]);
   console.log(
-    resultsGroupOne[0] +
-      resultsGroupOne[1] +
-      resultsGroupTwo[0] +
-      resultsGroupTwo[1]
+    `Resultado da Questão ${questionNumber}: `,
+    resultsGroupTwo[questionNumber - 3]
   );
-}
-
-function calculateQ4() {
-  answersGroupTwo[1] = document.getElementById("answerFour").value;
-  if (answersGroupTwo[1] === "4") {
-    weightsGroupTwo[0] = 0.2;
-    weightsGroupTwo[1] = 0;
-  } else {
-    weightsGroupTwo[0] = 0.1;
-    weightsGroupTwo[1] = 0.1;
-  }
-  resultsGroupTwo[0] = questionResult(answersGroupTwo[0], weightsGroupTwo[0]);
-  resultsGroupTwo[1] = questionResult(answersGroupTwo[1], weightsGroupTwo[1]);
-  console.log(`Resultado da Questão 04: `, resultsGroupTwo[1]);
-  console.log(
-    resultsGroupOne[0] +
-      resultsGroupOne[1] +
-      resultsGroupTwo[0] +
-      resultsGroupTwo[1]
-  );
+  console.log(calculateTotal());
 }
