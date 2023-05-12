@@ -10,6 +10,10 @@ let answersGroupThree = [0, 0, 0];
 let weightsGroupThree = [0.08, 0.06, 0.06];
 let resultsGroupThree = [0, 0, 0];
 
+let answersGroupFour = [0, 0, 0, 0];
+let weightsGroupFour = [0.05, 0.05, 0.05, 0.05];
+let resultsGroupFour = [0, 0, 0, 0];
+
 let answersGroupFive = [0, 0, 0];
 let weightsGroupFive = [0.06, 0.1, 0.04];
 let resultsGroupFive = [0, 0, 0];
@@ -42,13 +46,40 @@ function calculateTotal() {
   return resultTotal;
 }
 
-function switchButton(switchID, selectorID, questionNumber) {
+function switchButtonFour(switchID, selectorID, questionNumber) {
   let questionEnabled = document.querySelector(`#${switchID}`);
   let selectInput = document.querySelector(`#${selectorID}`);
   resultsGroupTwo[1] = document.getElementById(selectorID).value = "";
   selectInput.toggleAttribute("disabled");
   console.log(questionEnabled.checked);
   calculateG2(questionNumber);
+}
+
+function switchButtonNine(switchID, selectorID, questionNumber) {
+  let questionEnabled = document.querySelector(`#${switchID}`);
+  let selectInput = document.querySelector(`#${selectorID}`);
+  resultsGroupFour[1] = document.getElementById(selectorID).value = "";
+  selectInput.toggleAttribute("disabled");
+  console.log(questionEnabled.checked);
+  calculateG4(questionNumber);
+}
+
+function switchButtonTen(switchID, selectorID, questionNumber) {
+  let questionEnabled = document.querySelector(`#${switchID}`);
+  let selectInput = document.querySelector(`#${selectorID}`);
+  resultsGroupFour[2] = document.getElementById(selectorID).value = "";
+  selectInput.toggleAttribute("disabled");
+  console.log(questionEnabled.checked);
+  calculateG4(questionNumber);
+}
+
+function switchButtonEleven(switchID, selectorID, questionNumber) {
+  let questionEnabled = document.querySelector(`#${switchID}`);
+  let selectInput = document.querySelector(`#${selectorID}`);
+  resultsGroupFour[3] = document.getElementById(selectorID).value = "";
+  selectInput.toggleAttribute("disabled");
+  console.log(questionEnabled.checked);
+  calculateG4(questionNumber);
 }
 
 function calculateG1(questionNumber, answerID) {
@@ -66,6 +97,7 @@ function calculateG1(questionNumber, answerID) {
 }
 
 function calculateG2(questionNumber) {
+  // função que receba qual é a questão do Grupo 2
   answersGroupTwo[0] = document.getElementById("answerThree").value;
   answersGroupTwo[1] = document.getElementById("answerFour").value;
   if (answersGroupTwo[1] === "") {
@@ -86,7 +118,7 @@ function calculateG2(questionNumber) {
 }
 
 function calculateG3(questionNumber, answerID) {
-  // função que receba qual é a questão do Grupo 2
+  // função que receba qual é a questão do Grupo 3
   answersGroupThree[questionNumber - 5] =
     document.getElementById(answerID).value;
   resultsGroupThree[questionNumber - 5] = questionResult(
@@ -99,6 +131,8 @@ function calculateG3(questionNumber, answerID) {
   );
   console.log(calculateTotal());
 }
+
+function calculateG4() {}
 
 function calculateG5(questionNumber, answerID) {
   // função que receba qual é a questão do Grupo 5
