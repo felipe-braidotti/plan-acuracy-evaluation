@@ -10,6 +10,10 @@ let answersGroupThree = [0, 0, 0];
 let weightsGroupThree = [0.08, 0.06, 0.06];
 let resultsGroupThree = [0, 0, 0];
 
+let answersGroupFive = [0, 0, 0];
+let weightsGroupFive = [0.06, 0.1, 0.04];
+let resultsGroupFive = [0, 0, 0];
+
 function questionResult(answer, weight) {
   if (answer === "1") {
     x1 = 1;
@@ -30,7 +34,10 @@ function calculateTotal() {
     resultsGroupTwo[1] +
     resultsGroupThree[0] +
     resultsGroupThree[1] +
-    resultsGroupThree[2];
+    resultsGroupThree[2] +
+    resultsGroupFive[0] +
+    resultsGroupFive[1] +
+    resultsGroupFive[2];
 
   return resultTotal;
 }
@@ -79,7 +86,7 @@ function calculateG2(questionNumber) {
 }
 
 function calculateG3(questionNumber, answerID) {
-  // função que receba qual é a questão do Grupo 1
+  // função que receba qual é a questão do Grupo 2
   answersGroupThree[questionNumber - 5] =
     document.getElementById(answerID).value;
   resultsGroupThree[questionNumber - 5] = questionResult(
@@ -89,6 +96,21 @@ function calculateG3(questionNumber, answerID) {
   console.log(
     `Resultado da Questão ${questionNumber}: `,
     resultsGroupThree[questionNumber - 5]
+  );
+  console.log(calculateTotal());
+}
+
+function calculateG5(questionNumber, answerID) {
+  // função que receba qual é a questão do Grupo 5
+  answersGroupFive[questionNumber - 12] =
+    document.getElementById(answerID).value;
+  resultsGroupFive[questionNumber - 12] = questionResult(
+    answersGroupFive[questionNumber - 12],
+    weightsGroupFive[questionNumber - 12]
+  );
+  console.log(
+    `Resultado da Questão ${questionNumber}: `,
+    resultsGroupFive[questionNumber - 12]
   );
   console.log(calculateTotal());
 }
