@@ -22,6 +22,13 @@
     background-color: rgb(255, 226, 122);
 }
 
+.question-box-header-group-3{
+    height: 25px;
+    width: 25px;
+    border-radius: 5px;
+    background-color: rgb(122, 188, 255);
+}
+
 /* .question-box-header-content-title{
     margin: 8px;
 } */

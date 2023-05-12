@@ -38,7 +38,8 @@
               id="answerOne"
               class="form-select col-6"
               aria-label="Default select example"
-              onchange="calculateG1(1,'answerOne')" required
+              onchange="calculateG1(1,'answerOne')"
+              required
             >
               <option selected value="">Q01</option>
               <option value="1">Sim</option>
@@ -76,7 +77,8 @@
               id="answerTwo"
               class="form-select col-6"
               aria-label="Default select example"
-              onchange="calculateG1(2,'answerTwo')" required
+              onchange="calculateG1(2,'answerTwo')"
+              required
             >
               <option value="" selected>Q02</option>
               <option value="1">Sim</option>
@@ -143,7 +145,8 @@
                 class="form-check-input"
                 type="checkbox"
                 id="switchQuestion4"
-                onchange="switchButton('switchQuestion4', 'answerFour', 4)" checked
+                onchange="switchButton('switchQuestion4', 'answerFour', 4)"
+                checked
               />
             </div>
             <div class="question-box-header-group-2"></div>
@@ -154,7 +157,8 @@
           <!-- Aqui se INICIA a BOX-BODY da Questão 04 -->
           <div class="question-box-body">
             <p>
-              O plano possui informações para a realização de bloqueios nos ativos?
+              O plano possui informações para a realização de bloqueios nos
+              ativos?
             </p>
           </div>
           <!-- Aqui se ENCERRA a BOX-BODY da Questão 04 -->
@@ -177,7 +181,123 @@
         </div>
       </div>
       <!-- Aqui se ENCERRA a BOX da Questão 04 -->
-    </div>
+
+      <!-- Aqui se INICIA a BOX da Questão 05 -->
+      <div class="card question-box" style="width: 18rem">
+        <div class="col">
+          <!-- Aqui se INICIA a BOX-HEADER da Questão 05 -->
+          <div
+            class="question-box-header flex-row d-flex justify-content-between"
+          >
+            <h5 class="question-box-header-content-title">Questão 5</h5>
+            <div class="question-box-header-group-3"></div>
+          </div>
+
+          <!-- Aqui se ENCERRA a BOX-HEADER da Questão 05 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-BODY da Questão 05 -->
+          <div class="question-box-body">
+            <p>A Lista de Tarefas é coerente com o tipo de atividade?</p>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-BODY da Questão 05 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-ANSWER da Questão 05 -->
+          <div class="question-box-answer">
+            <select
+              id="answerFive"
+              class="form-select col-6"
+              aria-label="Default select example"
+              onchange="calculateG3(5,'answerFive')"
+            >
+              <option value="" selected>Q05</option>
+              <option value="1">Sim</option>
+              <option value="2">Parcial</option>
+              <option value="3">Não</option>
+            </select>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-ANSWER da Questão 05 -->
+        </div>
+      </div>
+      <!-- Aqui se ENCERRA a BOX da Questão 05 -->
+
+      <!-- Aqui se INICIA a BOX da Questão 06 -->
+      <div class="card question-box" style="width: 18rem">
+        <div class="col">
+          <!-- Aqui se INICIA a BOX-HEADER da Questão 06 -->
+          <div
+            class="question-box-header flex-row d-flex justify-content-between"
+          >
+            <h5 class="question-box-header-content-title">Questão 6</h5>
+            <div class="question-box-header-group-3"></div>
+          </div>
+
+          <!-- Aqui se ENCERRA a BOX-HEADER da Questão 06 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-BODY da Questão 06 -->
+          <div class="question-box-body">
+            <p>
+              A frequência está adequada e foi utilizado critério para a sua
+              determinação?
+            </p>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-BODY da Questão 06 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-ANSWER da Questão 06 -->
+          <div class="question-box-answer">
+            <select
+              id="answerSix"
+              class="form-select col-6"
+              aria-label="Default select example"
+              onchange="calculateG3(6,'answerSix')"
+            >
+              <option value="" selected>Q06</option>
+              <option value="1">Sim</option>
+              <option value="2">Parcial</option>
+              <option value="3">Não</option>
+            </select>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-ANSWER da Questão 06 -->
+        </div>
+      </div>
+      <!-- Aqui se ENCERRA a BOX da Questão 06 -->
+
+      <!-- Aqui se INICIA a BOX da Questão 07 -->
+      <div class="card question-box" style="width: 18rem">
+        <div class="col">
+          <!-- Aqui se INICIA a BOX-HEADER da Questão 07 -->
+          <div
+            class="question-box-header flex-row d-flex justify-content-between"
+          >
+            <h5 class="question-box-header-content-title">Questão 7</h5>
+            <div class="question-box-header-group-3"></div>
+          </div>
+
+          <!-- Aqui se ENCERRA a BOX-HEADER da Questão 07 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-BODY da Questão 07 -->
+          <div class="question-box-body">
+            <p>A Duração da Atividade é coerente com o tipo de serviço?</p>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-BODY da Questão 07 -->
+          <hr class="hr" />
+          <!-- Aqui se INICIA a BOX-ANSWER da Questão 07 -->
+          <div class="question-box-answer">
+            <select
+              id="answerSeven"
+              class="form-select col-6"
+              aria-label="Default select example"
+              onchange="calculateG3(7,'answerSeven')"
+            >
+              <option value="" selected>Q07</option>
+              <option value="1">Sim</option>
+              <option value="2">Parcial</option>
+              <option value="3">Não</option>
+            </select>
+          </div>
+          <!-- Aqui se ENCERRA a BOX-ANSWER da Questão 07 -->
+        </div>
+      </div>
+      <!-- Aqui se ENCERRA a BOX da Questão 07 -->
     </div>
 
     <script src="app.js"></script>

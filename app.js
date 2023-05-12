@@ -27,7 +27,10 @@ function calculateTotal() {
     resultsGroupOne[0] +
     resultsGroupOne[1] +
     resultsGroupTwo[0] +
-    resultsGroupTwo[1];
+    resultsGroupTwo[1] +
+    resultsGroupThree[0] +
+    resultsGroupThree[1] +
+    resultsGroupThree[2];
 
   return resultTotal;
 }
@@ -71,6 +74,21 @@ function calculateG2(questionNumber) {
   console.log(
     `Resultado da Questão ${questionNumber}: `,
     resultsGroupTwo[questionNumber - 3]
+  );
+  console.log(calculateTotal());
+}
+
+function calculateG3(questionNumber, answerID) {
+  // função que receba qual é a questão do Grupo 1
+  answersGroupThree[questionNumber - 5] =
+    document.getElementById(answerID).value;
+  resultsGroupThree[questionNumber - 5] = questionResult(
+    answersGroupThree[questionNumber - 5],
+    weightsGroupThree[questionNumber - 5]
+  );
+  console.log(
+    `Resultado da Questão ${questionNumber}: `,
+    resultsGroupThree[questionNumber - 5]
   );
   console.log(calculateTotal());
 }
