@@ -126,7 +126,7 @@ function calculateG3(questionNumber, answerID) {
   console.log(calculateTotal());
 }
 
-function calculateG4(questionNumber, answerID) {
+function calculateG4(questionNumber) {
   totalTrue = 0;
   for (let i = 0; i < switchesGroupFour.length; i++) {
     if (switchesGroupFour[i] === true) {
@@ -167,11 +167,26 @@ function calculateG4(questionNumber, answerID) {
     console.log(weightsGroupFour);
   }
 
-  answersGroupFour[questionNumber - 8] =
-    document.getElementById(answerID).value;
-  resultsGroupFour[questionNumber - 8] = questionResult(
-    answersGroupFour[questionNumber - 8],
-    weightsGroupFour[questionNumber - 8]
+  answersGroupFour[0] = document.getElementById("answerEight").value;
+  answersGroupFour[1] = document.getElementById("answerNine").value;
+  answersGroupFour[2] = document.getElementById("answerTen").value;
+  answersGroupFour[3] = document.getElementById("answerEleven").value;
+
+  resultsGroupFour[0] = questionResult(
+    answersGroupFour[0],
+    weightsGroupFour[0]
+  );
+  resultsGroupFour[1] = questionResult(
+    answersGroupFour[1],
+    weightsGroupFour[1]
+  );
+  resultsGroupFour[2] = questionResult(
+    answersGroupFour[2],
+    weightsGroupFour[2]
+  );
+  resultsGroupFour[3] = questionResult(
+    answersGroupFour[3],
+    weightsGroupFour[3]
   );
 
   console.log(
